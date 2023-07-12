@@ -20,9 +20,9 @@ The module takes the following variables as input:
 - namespace: Namespace to differenciate the security group names across etcd clusters. The generated security groups will have the following names: 
 
 ```
-etcd-member-<namespace>
-etcd-client-<namespace>
-etcd-bastion-<namespace>
+<namespace>-etcd-member
+<namespace>-etcd-client
+<namespace>-etcd-bastion
 ```
 
 ## Output

@@ -1,17 +1,17 @@
 resource "openstack_networking_secgroup_v2" "etcd_member" {
-  name                 = "etcd-member-${var.namespace}"
+  name                 = "${var.namespace}-etcd-member"
   description          = "Security group for etcd members"
   delete_default_rules = true
 }
 
 resource "openstack_networking_secgroup_v2" "etcd_client" {
-  name                 = "etcd-client-${var.namespace}"
+  name                 = "${var.namespace}-etcd-client"
   description          = "Security group for the clients connecting to etcd members"
   delete_default_rules = true
 }
 
 resource "openstack_networking_secgroup_v2" "etcd_bastion" {
-  name                 = "etcd-bastion-${var.namespace}"
+  name                 = "${var.namespace}-etcd-bastion"
   description          = "Security group for the bastion connecting to etcd members"
   delete_default_rules = true
 }
